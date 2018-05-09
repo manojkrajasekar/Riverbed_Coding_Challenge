@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Code Challenge</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="validation.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                    SignUp for the Code Challenge
+            </div>
+            <div class="common-screen">
+                <div class="progress">
+                    <div id="ProgressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                        <span id="current-progress"></span>
+                    </div>
+                </div>
+                <div id="user-details-screen-one">
+                    <div id="user-name">
+                        <span>User name</span>
+                        <input id="user-name-value" onchange="validateUserName()" type="text" autofocus/>
+                        <span id="user-name-error">Username already exists !</span>
+                        <span id="empty-user-name">Please enter a valid username !</span>
+                    </div>
+                    <div id="user-email">
+                        <span id ="mail">Mail ID</span>
+                        <input id="email-id-value" onchange="validateUserEmail()" type="text"></input>
+                        <span id="email-id-error">Invalid Mail ID</span>
+                        <span id="empty-mail-id">Please enter the mail id !</span> 
+                    </div>
+                    <div id="next">
+                        <button class="btn btn-primary" onclick="validate()">Next</button>
+                        <!-- <button class="btn btn-primary" onclick="progress()">Progress</button> -->
+                    </div>
+                </div>
+                <div id="user-details-screen-two">
+                        <div id="enter-number">
+                            <span id="number-validation">
+                                <span>Enter a Number</span>
+                            </span>
+                            <input id="number-value" onchange="validateNumber()" type="number"></input>
+                            <div id="number-error">The value must be between 0 and 100</div>
+                        </div>
+                        <div id="select-type">
+                            <span id="choose-option">Choose an option</span>
+                            <select id="select-value" onchange="validateSelectedValue()"> <!--Supplement an id here instead of using 'text'-->
+                                    <option value="United States">United States</option> 
+                                    <option value="India" selected>India</option>
+                                    <option value="China">China</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Singapore">Singapore</option>
+                            </select>
+                        </div>
+                        <div id="buttonWrapper">
+                            <span id="back">
+                                    <button class="btn btn-dark" onclick="previouspage()">Back</button>
+                            </span>
+                            <span id="submit">
+                                <button id="submitButton" class="btn btn-success" onclick="submitData()" disabled>Submit</button>
+                            </span>
+                        </div>
+                </div>
+                </div>
+                <div id="view-data">
+                       
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
