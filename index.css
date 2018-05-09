@@ -173,7 +173,8 @@
 .container > .common-screen > #user-details-screen-two > #enter-number > #number-error {
     min-height: 20px;
     max-height: 40px;
-    margin-left: 50px;
+    margin-left: 65px;
+    margin-bottom: 23px;
     color: red;
     font-size: 25px;
     display: none;
@@ -191,7 +192,7 @@
 .container > .common-screen > #user-details-screen-two > #select-type {
     min-height: 95px;
     max-height: 150px;
-    margin: 30px 5px 5px 30px;
+    margin: 40px 5px 5px 30px;
 }
 
 .container >.common-screen >  #user-details-screen-two > #select-type > #choose-option {
