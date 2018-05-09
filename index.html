@@ -19,8 +19,7 @@
                 </div>
                 <div id="user-details-screen-one">
                     <div id="user-name">
-                        <span>User Name</span>
-                        
+                        <span>User name</span>
                             <input type="text" 
                                    id="user-name-value"
                                    class="form-control" 
@@ -28,19 +27,18 @@
                                    autofocus
                                    placeholder="Enter your username"
                             />
-                        
                         <span id="user-name-error">Username already exists !</span>
                         <span id="empty-user-name">Please enter a valid username !</span>
                     </div>
                     <div id="user-email" class="control-group error">
-                        <span id ="mail">Mail ID</span>
+                        <span id ="mail">Mail Id</span>
                         <input type="text"
                                id="email-id-value"
                                onchange="validateUserEmail()" 
                                class="form-control"
-                               placeholder="Enter your mail ID"
+                               placeholder="Enter your mail Id"
                         />
-                        <span id="email-id-error" class="help-inline">Invalid Mail ID !</span>
+                        <span id="email-id-error">Invalid Mail ID !</span>
                         <span id="empty-mail-id">Please enter the mail id !</span> 
                     </div>
                     <div id="next">
@@ -51,12 +49,13 @@
                 <div id="user-details-screen-two">
                         <div id="enter-number">
                             <span id="number-validation">
-                                <span>Enter your age</span>
+                                Enter your Age
                             </span>
                             <input type="number"
                                    id="number-value"
                                    onchange="validateNumber()" 
                                    class="form-control"
+                                   placeholder="age"
                             />
                             <div id="number-error">The value must be between 0 and 100</div>
                         </div>
