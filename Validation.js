@@ -58,6 +58,8 @@ function validateUserName() {
                 if((userName.value) === userDetails[i].name) {
                 
                 document.getElementById('user-name-error').style.display = "block";
+                //document.getElementById('user-name-value').className = document.getElementById('user-name-value').className + "errorColor";  // this adds the error class
+                document.getElementById('user-name-value').style.borderColor="#FF0000";
                 document.getElementById('empty-user-name').style.display = "none";
                 isUserNameValid = false;
                 break;
@@ -65,11 +67,14 @@ function validateUserName() {
             else {
                 isUserNameValid = true;
                 document.getElementById('user-name-error').style.display = "none";
+                document.getElementById('user-name-value').style.borderColor="grey";
             }
         }
 
         while(isUserNameValid && (countUserNameValue === 0)) {
             userDetail.name = userName.value;
+            document.getElementById('user-name-error').style.display = "none";
+            document.getElementById('empty-user-name').style.display = "none";    
             progressUpdate();
             countUserNameValue++;
             break;
@@ -78,6 +83,7 @@ function validateUserName() {
     else {
         isUserNameValid = false;
         document.getElementById('empty-user-name').style.display = "block";
+        document.getElementById('user-name-value').style.borderColor="#FF0000";
         document.getElementById('user-name-error').style.display = "none";
         //return isUserNameValid;
     }
@@ -91,6 +97,8 @@ function validateUserEmail() {
 
     if(userEmail.value.length == 0){
         isUserEmailValid = false;
+        //This is not Working
+        document.getElementById('email-id-value').style.borderColor="#FF0000";
         document.getElementById('empty-mail-id').style.display = "block";
         document.getElementById('email-id-error').style.display = "none";
     }
@@ -99,6 +107,7 @@ function validateUserEmail() {
         isUserEmailValid = false;
         document.getElementById('empty-mail-id').style.display = "none";
         document.getElementById('email-id-error').style.display = "block";
+        document.getElementById('email-id-value').style.borderColor="#FF0000";
     }
     else if(emailRegex.test(userEmail.value) && (countUserEmailValue === 0)) {
         isUserEmailValid = true;
@@ -108,6 +117,7 @@ function validateUserEmail() {
         userDetail.mailId = userEmail.value;
         document.getElementById('email-id-error').style.display = "none";
         document.getElementById('empty-mail-id').style.display = "none";
+        document.getElementById('email-id-value').style.borderColor="lightgrey";
  
         // document.getElementById('user-details-screen-one').style.display = "none";
         // document.getElementById('user-details-screen-two').style.display = "block";
@@ -138,9 +148,23 @@ function validateUserEmail() {
         document.getElementById('user-details-screen-one').style.display = "none";
         document.getElementById('user-details-screen-two').style.display = "block";
      }
-     else {
+     else if((!isUserNameValid) && (!isUserEmailValid) ){
+        document.getElementById('empty-user-name').style.display = "block";
+        document.getElementById('user-name-value').style.borderColor="#FF0000";
         document.getElementById('empty-mail-id').style.display = "block";
+        document.getElementById('email-id-value').style.borderColor="#FF0000";
+        //document.getElementById('empty-mail-id').style.display = "block";
      }
+
+     else if(!isUserNameValid){
+        document.getElementById('empty-user-name').style.display = "block";
+        document.getElementById('user-name-value').style.borderColor="#FF0000";
+        //document.getElementById('empty-mail-id').style.display = "block";
+     }
+     else if(!isUserEmailValid){
+        document.getElementById('empty-mail-id').style.display = "block";
+        document.getElementById('email-id-value').style.borderColor="#FF0000";
+    }
  }
 
 
@@ -161,6 +185,7 @@ function validateNumber() {
     if((numberValue>=0) && (numberValue<=100) && (countNumber === 0)) {
         isNumberValid = true;
         document.getElementById('number-error').style.display = "none"; 
+        document.getElementById('number-value').style.borderColor="lightgrey";
         progressUpdate();
         countNumber++;
         userDetail.age = numberValue;
@@ -168,6 +193,7 @@ function validateNumber() {
     else {
        isNumberValid = false;
        document.getElementById('number-error').style.display = "block"; 
+       document.getElementById('number-value').style.borderColor="#FF0000";
     }
 }
 
@@ -192,11 +218,16 @@ function submitData() {
     //document.getElementById('data-saved').style.display = "block";
     document.getElementById('user-details-screen-one').style.display = "none";
     document.getElementById('user-details-screen-two').style.display = "none";
-    document.getElementById('view-data').style.display = "block";
+    document.getElementById('view-user-details').style.display = "block";
 
     for(var i = userDetails.length-1; i>(userDetails.length-2); i--){
         console.log(userDetails[i]);
-        document.getElementById('view-data').value = userDetails[i];
+        console.log(userDetails[i].name);
+        document.getElementById('data-userName').innerHTML = userDetails[i].name;
+        document.getElementById('data-userMailID').innerHTML = userDetails[i].mailId;
+        document.getElementById('data-userAge').innerHTML = userDetails[i].age;
+        document.getElementById('data-userNationality').innerHTML = userDetails[i].Nationality;
+
     }
 }
 

@@ -3,43 +3,51 @@
     flex-direction: column
 }
 
-.container > .header {
+.container > #header {
     min-height: 80px;
     max-height: 130px;
-    margin: 10px;
-    width: auto;
-    border: solid 1px black;
-    font-size: 45px;
+    min-width: 800px;
+    max-width: 1500px;
+    margin: 15px 5px 20px 5px;
+    border-radius: 5px;
+    background-color:#F1F1F1;
+    font-size: 55px;
+    font-family: serif;
     letter-spacing: 1px;
     text-align: center;
 }
 
 .container > .common-screen {
-    flex-direction: column;
+    margin: auto;
     min-width: 720px;
     max-width: 890px;
     min-height: 500px;
     max-height: 650px;
-    margin: auto;
     border: solid 1px black;
     border-radius: 5px;
 }
 
 .container > .common-screen > .progress {
     margin: 50px;
-    width: 600px;
+    min-width: 650px;
+    max-width: 800px;
+    min-height: 35px;
+    max-height: 55px;
 }
+ 
+.container > .common-screen > .progress > #ProgressBar {
+    background-color: rgb(33, 209, 33);
+} 
 
 .container > .common-screen > #user-details-screen-one {
-    flex-direction: column;
     min-width: 550px;
     max-width: 680px;
     min-height: 430px;
-    max-height: 520px;
-    margin: auto;
-    border: solid 1px black;
+    max-height: 510px;
+    margin: 10px 5px 30px 20px;
+    border: solid 1px #F1F1F1;
     border-radius: 5px;
-    background-color:rgb(255, 255, 255);
+    background-color:#F1F1F1;
 }
 
 .container > .common-screen > #user-details-screen-one > #user-name  {
@@ -47,19 +55,23 @@
     font-family: serif;
     min-height: 70px;
     max-height: 130px;
-    margin: 95px 20px 20px 95px;
+    margin: 65px 20px 2px 115px;
 }
 
 .container > .common-screen > #user-details-screen-one > #user-name > #user-name-value  {
-    min-height: 50px;
-    max-height: 90px;
-    margin-left: 10px;
+    min-height: 35px;
+    max-height: 50px;
+    min-width: 190px;
+    max-width: 250px;
+    margin-left: 2px;
 }
 
 .container > .common-screen > #user-details-screen-one > #user-name > #user-name-error  {
     min-height: 40px;
-    max-height: 70px;
-    margin: 8px 10px 10px 160px;
+    max-height: 50px;
+    min-width: 14px;
+    max-width: 210px;
+    margin: 8px 10px 10px 2px;
     color: red;
     font-size: 20px;
     display: none;
@@ -68,7 +80,7 @@
 .container > .common-screen > #user-details-screen-one > #user-name > #empty-user-name  {
     min-height: 40px;
     max-height: 70px;
-    margin: 8px 10px 10px 160px;
+    margin: 8px 10px 10px 2px;
     color: red;
     font-size: 20px;
     display: none;
@@ -80,7 +92,7 @@
     font-family: serif;
     min-height: 50px;
     max-height: 90px;
-    margin: 85px 20px 40px 85px;
+    margin: 50px 20px 40px 85px;
     /* border: solid 1px black; */
 }
 
@@ -95,14 +107,16 @@
 .container > .common-screen > #user-details-screen-one > #user-email > #email-id-value {
     min-height: 35px;
     max-height: 50px;
-    margin-left: 10px;
+    min-width: 270px;
+    max-width: 390px;
+    margin-left: 25px;
 }
 
 
 .container > .common-screen > #user-details-screen-one > #user-email > #email-id-error  {
     min-height: 40px;
     max-height: 70px;
-    margin: 8px 10px 10px 160px;
+    margin: 8px 10px 10px 27px;
     color: red;
     font-size: 20px;
     display: none;
@@ -111,7 +125,7 @@
 .container > .common-screen > #user-details-screen-one > #user-email > #empty-mail-id  {
     min-height: 40px;
     max-height: 70px;
-    margin: 8px 10px 10px 160px;
+    margin: 8px 10px 10px 27px;
     color: red;
     border: red;
     border-width: 1px;
@@ -130,36 +144,23 @@
 }
 
 .container > .common-screen > #user-details-screen-two {
-    /* flex-direction: column;
-    min-width: 650px;
-    max-width: 850px;
-    min-height: 450px;
-    max-height: 600px;
-    margin: auto;
-    display: none;
-    border: solid 1px black;
-    background-color:rgb(255, 255, 255); */
-
-
     min-width: 550px;
     max-width: 680px;
     min-height: 430px;
     max-height: 520px;
-    margin: auto;
-    border: solid 1px black;
+    margin: 10px 5px 30px 20px;
     border-radius: 5px;
     display: none;
-    background-color:rgb(255, 255, 255); 
+    background-color:#F1F1F1;
 }
 
 .container > .common-screen > #user-details-screen-two > #enter-number {
     font-size: 30px;
-    min-height: 100px;
-    max-height: 170px;
-    margin: 40px 20px 20px 95px;
+    min-height: 70px;
+    max-height: 120px;
+    margin: 80px 20px 20px 45px;
     font-family: serif;
-    /* border-style: solid;
-    border-width: 1px; */
+    border: solid 1px black;
 }
 
 .container > .common-screen > #user-details-screen-two > #enter-number > #number-validation {
@@ -172,7 +173,7 @@
 .container > .common-screen > #user-details-screen-two > #enter-number > #number-error {
     min-height: 20px;
     max-height: 40px;
-    margin-left: 250px;
+    margin-left: 50px;
     color: red;
     font-size: 25px;
     display: none;
@@ -180,35 +181,47 @@
 
 .container > .common-screen > #user-details-screen-two > #enter-number > #number-value {
     font-size: 30px;
-    min-width: 40px;
-    max-width: 55px;
-    margin: 35px 20px 20px 15px;
+    min-width: 50px;
+    max-width: 90px;
+    min-height: 20px;
+    max-height: 40px;
+    margin: 15px 20px 20px 65px;
 }
 
 .container > .common-screen > #user-details-screen-two > #select-type {
     min-height: 95px;
     max-height: 150px;
-    margin: 85px 5px 10px 30px;
-    /* border-style: solid;
-    border-width: 1px; */
+    margin: 45px 5px 10px 30px;
 }
 
 .container >.common-screen >  #user-details-screen-two > #select-type > #choose-option {
     font-size: 30px;
     font-family: serif;
-    min-height: 70px;
-    max-height: 130px;
-    margin: 80px 20px 20px 95px;
+    min-height: 80px;
+    max-height: 140px;
+    margin: 40px 20px 20px 85px;
+    /* border-style: solid;
+    border-width: 1px; */
+}
+
+.container >.common-screen >  #user-details-screen-two > #select-type > #select-value {
+    font-size: 30px;
+    font-family: serif;
+    min-height: 45px;
+    max-height: 80px;
+    min-width: 150px;
+    max-width: 240px;
+    margin: 10px 20px 20px 80px;
 }
 
 .container > .common-screen > #user-details-screen-two > #buttonWrapper  {
-    margin: 35px 55px 15px 130px;
-    border-style: solid;
-    border: 1px solid black;
+    margin: 65px 30px 15px 30px;
+    /* border-style: solid;
+    border: 1px solid black; */
     min-height: 75px;
     max-height: 120px;
-    min-width: 450px;
-    max-width: 580px;
+    min-width: 550px;
+    max-width: 780px;
 }
 
 .container > .common-screen > #user-details-screen-two > #buttonWrapper > #back {
@@ -225,16 +238,51 @@
     margin: 25px 65px 10px 20px;
 }
 
-.container > .common-screen > #view-data {
+.container > .common-screen > #view-user-details {
     min-width: 550px;
-    max-width: 750px;
-    min-height: 350px;
-    max-height: 550px;
-    margin: auto;
+    max-width: 680px;
+    min-height: 430px;
+    max-height: 520px;
+    margin: 10px 5px 30px 20px;
+    border-radius: 5px;
     display: none;
-    border: solid 1px black;
-    background-color: #B2E7FF;
+    background-color:#F1F1F1;
 }
+
+.container > .common-screen > #view-user-details > #heading {
+    text-align: center;
+    font-size: 33px;
+}
+
+.container > .common-screen > #view-user-details > #user-info {
+    min-width: 150px;
+    max-width: 290px;
+    min-height: 70px;
+    max-height: 100px;
+    padding-top: 10px;
+    margin: 20px 70px 10px 160px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.container > .common-screen > #view-user-details > #user-info > #data-key {
+    min-width: 100px;
+    max-width: 200px;
+    min-height: 110px;
+    max-height: 180px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 20px 10px 30px;
+    border-style: solid 1px black;
+}
+
+.errorColor {
+    border: 1px solid red;
+}
+
+
+
+
 
 
 

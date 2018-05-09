@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="header">
+            <div id="header">
                     SignUp for the Code Challenge
             </div>
             <div class="common-screen">
@@ -19,15 +19,28 @@
                 </div>
                 <div id="user-details-screen-one">
                     <div id="user-name">
-                        <span>User name</span>
-                        <input id="user-name-value" onchange="validateUserName()" type="text" autofocus/>
+                        <span>User Name</span>
+                        
+                            <input type="text" 
+                                   id="user-name-value"
+                                   class="form-control" 
+                                   onchange="validateUserName()" 
+                                   autofocus
+                                   placeholder="Enter your username"
+                            />
+                        
                         <span id="user-name-error">Username already exists !</span>
                         <span id="empty-user-name">Please enter a valid username !</span>
                     </div>
-                    <div id="user-email">
+                    <div id="user-email" class="control-group error">
                         <span id ="mail">Mail ID</span>
-                        <input id="email-id-value" onchange="validateUserEmail()" type="text"></input>
-                        <span id="email-id-error">Invalid Mail ID</span>
+                        <input type="text"
+                               id="email-id-value"
+                               onchange="validateUserEmail()" 
+                               class="form-control"
+                               placeholder="Enter your mail ID"
+                        />
+                        <span id="email-id-error" class="help-inline">Invalid Mail ID !</span>
                         <span id="empty-mail-id">Please enter the mail id !</span> 
                     </div>
                     <div id="next">
@@ -38,14 +51,18 @@
                 <div id="user-details-screen-two">
                         <div id="enter-number">
                             <span id="number-validation">
-                                <span>Enter a Number</span>
+                                <span>Enter your age</span>
                             </span>
-                            <input id="number-value" onchange="validateNumber()" type="number"></input>
+                            <input type="number"
+                                   id="number-value"
+                                   onchange="validateNumber()" 
+                                   class="form-control"
+                            />
                             <div id="number-error">The value must be between 0 and 100</div>
                         </div>
                         <div id="select-type">
-                            <span id="choose-option">Choose an option</span>
-                            <select id="select-value" onchange="validateSelectedValue()"> <!--Supplement an id here instead of using 'text'-->
+                            <span id="choose-option">Nationality</span>
+                            <select class="form-control selectpicker" id="select-value" onchange="validateSelectedValue()"> 
                                     <option value="United States">United States</option> 
                                     <option value="India" selected>India</option>
                                     <option value="China">China</option>
@@ -62,12 +79,26 @@
                             </span>
                         </div>
                 </div>
-                </div>
-                <div id="view-data">
-                       
+                <div id="view-user-details">
+                    <div id="heading">User Details Saved Successfully !</div>
+                    <div id="user-info">
+                        <span id="data-key">User Name:</span>
+                        <span id="data-userName"></span>
+                    </div>
+                    <div id="user-info">
+                        <span id="data-key">Mail ID:</span>
+                        <span id="data-userMailID"></span>
+                    </div>
+                    <div id="user-info">
+                        <span id="data-key">Age:</span>
+                        <span id="data-userAge"></span>
+                    </div>
+                    <div id="user-info">
+                        <span id="data-key">Nationality:</span>
+                        <span id="data-userNationality"></span>
+                    </div>
                 </div>
             </div>
-            
         </div>
     </body>
 </html>
